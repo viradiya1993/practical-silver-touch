@@ -1,0 +1,32 @@
+<div class="card">
+	<div class="card-body">
+		<h4 class="card-title"><b>Your basket</b></h4>
+		<div class="basketData">
+			<div class="row">
+				<div class="col-md-12">
+					<label class="float-left">
+						<h4>Product name</h4>
+					</label>
+					<label class="float-right"><span>{{selectedFoods?.name}}</span></label>
+				</div>
+				<div class="col-md-12">
+					<label class="float-left">
+						<h4>Product Price</h4>
+					</label>
+					<label class="float-right"><span>${{selectedFoods?.price ? selectedFoods?.price : 0}}</span></label>
+				</div>
+				<div class="col-md-12">
+					<label class="float-left">
+						<h4>Product Quantity</h4>
+					</label>
+					<label class="float-right"><span>{{selectedFoods?.quantity}}</span></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="checkout-btn">
+		<button class="btn btn-success">
+			<span  routerLink="/cart-list">Checkout</span>
+		</button>
+	</div>
+</div>

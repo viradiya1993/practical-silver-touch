@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Product Name</th>
+						<th scope="col">Add to cart</th>
+						<th scope="col">Price</th>
+						<th scope="col">Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let product of products; let i = index;" (click)="open(product)">
+						<td>{{ i + 1}}</td>
+						<td>{{product?.productname}}</td>
+						<td>Click add to cart</td>
+						<td>${{product?.price ? product?.price : 0}}</td>
+						<td>{{product?.quantity}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<app-add-to-cart></app-add-to-cart>
+		</div>
+	</div>
+</div>
